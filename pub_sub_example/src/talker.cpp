@@ -14,7 +14,7 @@ int main(int argc, char* argv[]){
   int counter = 0;
   ros::Rate rate(10);
   while (ros::ok()){
-    pub_msg.data = "hello " + std::to_string(counter) ;
+    pub_msg.data = "hello " + std::to_string(counter);
     talker_pub.publish(pub_msg);
     counter++;
     rate.sleep();
